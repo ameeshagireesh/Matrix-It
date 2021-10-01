@@ -3,12 +3,6 @@
     "name": "MatrixIt",
     "description": "Feel like you're walking the path in the world of Matrix using this extension.",
     "version": "1.0.0",
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "js": ["content.js"]
-        }
-    ],
     "background": {
         "scripts":[
             "popup.js"
