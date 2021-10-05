@@ -11,29 +11,99 @@
 </head>
 <style>
 
-h1{
-    font-family: 'Michroma', sans-serif;
-}
+    body{
+        min-width: 300px;
+        text-align: center;
+    }
 
-.green{
-    color: #03A062;
-}
+    h1{
+        font-family: 'Michroma', sans-serif;
+    }
 
-p, .button{
-    font-family: 'Michroma', sans-serif;
-    font-size: 1.25rem;
-}
-.button{
-    background-color: #224738;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 24rem;
-    height: 4rem;
-    border-radius: 5rem;
-}
+    .green{
+        color: #03A062;
+    }
+
+    p, .button{
+        font-family: 'Michroma', sans-serif;
+        font-size: 1.25rem;
+    }
+    .button{
+        background-color: #224738;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 24rem;
+        height: 4rem;
+        border-radius: 5rem;
+        /* animation: backgroundRed 2s infinite; */
+        cursor: pointer;
+    }
+
+    .row{
+        padding: 0 0.25rem;
+        pointer-events: none;
+    }
+
+    .circle{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 12rem;
+        height: 4rem;
+        border-radius: 5rem;
+        background-color: green;
+        /* animation: moveCircleRight 2s infinite; */
+        pointer-events: none;
+    }
+
+    /* animations */
+    @keyframes moveCircleRight{
+        from{
+            left: 0;
+            background-color: green;
+
+        }
+        to{
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: red;
+        }
+    }
+
+    @keyframes moveCircleLeft{
+        from{
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: red;
+            
+        }
+        to{
+            left: 0;
+            background-color: green;
+        }
+    }
+
+    @keyframes backgroundRed{
+        from{
+            background-color: green;
+        }
+        to{
+            background-color: red;
+        }
+    }
+
+    @keyframes backgroundGreen{
+        from{
+            background-color: red;
+        }
+        to{
+            background-color: green;
+        }
+    }
+    
 </style>
 
 <body>
@@ -46,6 +116,11 @@ p, .button{
     <div class="button">
         <div class ="row">Real World</div>
         <div class ="row">Matrix World</div>
+        <div class="circle"></div>
     </div>
 </body>
+
+<script src="./popup.js">
+</script>
+
 </html>
