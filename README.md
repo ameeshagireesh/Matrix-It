@@ -8,7 +8,7 @@ To get a local copy up and running follow these simple steps.
  
 1. Clone the repo
 ```sh
-git clone https://github.com/csivitu/riddler-backend-2021.git
+git clone https://github.com/ameeshagireesh/Matrix-It.git
 ```
 ## Contributing
 
